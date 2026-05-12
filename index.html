@@ -1,33 +1,146 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Closed</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Links</title>
     <style>
         body {
-            /* Sets the background to black and text to white */
-            background-color: black;
-            color: white;
-            
-            /* Uses a clean font */
-            font-family: Arial, sans-serif;
-            
-            /* Removes default margins and makes the body take up the full viewport height */
             margin: 0;
-            height: 100vh;
-            
-            /* Centers the content perfectly using Flexbox */
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #020202;
+            color: #f7f7f7;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 120px;
+        }
+        
+        .container {
+            width: 92%;
+            max-width: 520px;
             text-align: center;
+            padding: 30px 24px;
+            background: #111111;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+        }
+        
+        h1 {
+            margin: 0 0 10px;
+            font-size: 28px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        
+        p.subtitle {
+            margin: 0 0 26px;
+            font-size: 15px;
+            color: #bbbbbb;
+            line-height: 1.6;
+        }
+        
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48%;
+            min-width: 150px;
+            padding: 16px 14px;
+            font-size: 16px;
+            font-weight: 700;
+            border: 2px solid transparent;
+            border-radius: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+        }
+        
+        .btn-gold {
+            background: #000000;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+        
+        .btn-fx {
+            background: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(255, 0, 0, 0.18);
+        }
+        
+        .btn-gold:hover {
+            border-color: #ff3b3f;
+        }
+        
+        .btn-fx:hover {
+            border-color: #ff3b3f;
+        }
+        
+        .bottom-frame {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 16px 20px 22px;
+            background: rgba(16, 16, 16, 0.98);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 -8px 24px rgba(0, 0, 0, 0.45);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .bottom-frame .btn {
+            width: 100%;
+            max-width: 520px;
+            min-width: 0;
+            border-radius: 16px;
+        }
+        
+        footer {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #d1d1d1;
+            opacity: 0.95;
         }
     </style>
 </head>
-<body>
-    
-    <h1>This site has been closed till payment</h1>
 
+<body>
+    <div class="container">
+        <h1>Market Links</h1>
+        <p class="subtitle">Tap the first link in the main card, and the second button appears in a bottom frame overlay.</p>
+
+        <div class="button-row">
+            <a class="btn btn-gold" href="https://eliteforex-sigma.vercel.app/" target="_blank">Gold (XAU/USD)</a>
+        </div>
+
+        <footer>Tap a button to open charts</footer>
+    </div>
+
+    <div class="bottom-frame">
+        <a class="btn btn-fx" href="https://trade-whisperer-273.lovable.app" target="_blank">Currency Pairs</a>
+    </div>
 </body>
+
 </html>
